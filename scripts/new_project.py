@@ -46,6 +46,7 @@ def main():
         sys.exit(f"refusing to overwrite non-empty directory: {dst}")
     shutil.copytree(TEMPLATE, dst, dirs_exist_ok=True)
     (dst / "gitignore").rename(dst / ".gitignore")
+    (dst / "figures").mkdir(exist_ok=True)
 
     subs = {
         "__ZH_TITLE__": a.zh_title,
