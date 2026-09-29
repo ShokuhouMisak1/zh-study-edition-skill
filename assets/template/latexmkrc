@@ -1,5 +1,5 @@
 # latexmk 配置: XeLaTeX + biber + xindy
-# 用法: latexmk Template-AJbook.tex   或   make
+# 用法: latexmk main.tex   或   make
 
 $pdf_mode = 5;   # 5 = xelatex
 $xelatex = 'xelatex -synctex=1 -interaction=nonstopmode -file-line-error %O %S';
