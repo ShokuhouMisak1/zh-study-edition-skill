@@ -1,0 +1,12 @@
+# latexmk 配置: XeLaTeX + biber + xindy
+# 用法: latexmk Template-AJbook.tex   或   make
+
+$pdf_mode = 5;   # 5 = xelatex
+$xelatex = 'xelatex -synctex=1 -interaction=nonstopmode -file-line-error %O %S';
+$bibtex_use = 2; # 需要时自动运行 biber, 并在 clean 时删除 .bbl
+
+# imakeidx 在未开启 shell-escape 时不会自行调用 xindy, 由 latexmk 代为调用.
+# 选项与文档中 \makeindex[options=...] 保持一致.
+$makeindex = 'xindy -M texindy -I xelatex -C utf8 -o %D %S';
+
+$clean_ext = "bbl run.xml synctex.gz xdv lof lot thm ind ilg idx xdy";

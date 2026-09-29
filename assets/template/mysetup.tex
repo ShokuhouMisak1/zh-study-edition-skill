@@ -1,0 +1,38 @@
+% 中文学习版的自定义宏与环境 (在 AJbook 模板之上追加)
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{longtable}
+
+% ---------- 常用记号 (按原书需要增删, 保持与原书记号一致) ----------
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\Z}{\mathbb{Z}}
+
+% ---------- “补充讲解” 方框 ----------
+% 凡是中文版在原文之外新增的讲解/例题/推导, 一律放进 jiedu 环境,
+% 与原作者的内容严格分开 (开放许可一般要求标明改动; 对读者也更诚实).
+\newtcolorbox{jiedu}[1][]{
+	breakable, enhanced,
+	colback = teal!4, colframe = teal!60!black, boxrule = 0.3mm,
+	coltitle = teal!40!black, colbacktitle = teal!15,
+	fonttitle = \sffamily\bfseries,
+	title = {补充讲解\ifx\relax#1\relax\else：#1\fi},
+	before skip = 0.6em, after skip = 0.6em
+}
+% 行内的“译注” (改正笔误、说明省略、简短补充)
+\newcommand{\yizhu}[1]{\footnote{\textbf{译注：}#1}}
+% 课件改编时标注出处页: \slideref{12} -> [slide 12]
+\newcommand{\slideref}[1]{\textsf{\small\color{gray}[slide #1]}}
+
+% ---------- 代码 ----------
+\lstset{
+	language = Python,
+	basicstyle = \ttfamily\small,
+	keywordstyle = \color{blue!70!black},
+	commentstyle = \color{green!40!black},
+	stringstyle = \color{red!60!black},
+	frame = single, framerule = 0.3pt, rulecolor = \color{gray!60},
+	breaklines = true, columns = fullflexible, keepspaces = true,
+	showstringspaces = false
+}

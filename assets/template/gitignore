@@ -1,0 +1,24 @@
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.idx
+*.ind
+*.ilg
+*.lof
+*.lot
+*.xdy
+*.thm
+*.fls
+*.fdb_latexmk
+*.xdv
+*.synctex.gz
+.texpadtmp
+.DS_Store
+__pycache__/
+# 原始材料 (受版权保护的 PDF/PPT 不要提交)
+source/
