@@ -11,15 +11,18 @@
 ## 目录
 
 ```
-SKILL.md                 主流程
-references/              写作规范、LaTeX 注意事项、多章并行、课件处理
-scripts/                 new_project.py / extract_source.py / term_check.py / build_report.py
-assets/template/         修好的 AJbook 模板 (字体可移植、xindy 索引可用)
+skills/
+└── zh-study-edition/
+    ├── SKILL.md             主流程
+    ├── references/          写作规范、LaTeX 注意事项、多章并行、课件处理
+    ├── scripts/             new_project.py / extract_source.py / term_check.py / build_report.py
+    └── assets/template/     修好的 AJbook 模板 (字体可移植、xindy 索引可用)
 ```
 
 ## 安装
 
-- Claude Code：把本目录复制到 `~/.claude/skills/zh-study-edition/` (个人) 或项目的 `.claude/skills/` 下。
+- Claude Code：把 `skills/zh-study-edition/` 复制到 `~/.claude/skills/` (个人) 或项目的 `.claude/skills/` 下：
+  `cp -R skills/zh-study-edition ~/.claude/skills/`
 - Claude 应用：导入打包好的 `zh-study-edition.skill`。
 
 依赖：TeX Live (xelatex, biber, xindy, latexmk)、poppler (pdftotext, pdftoppm)、python3；处理 PPTX 时另需 LibreOffice 或 `python-pptx`。
@@ -30,4 +33,4 @@ assets/template/         修好的 AJbook 模板 (字体可移植、xindy 索引
 
 ## 许可
 
-模板 (AJbook) 为李文威的作品，CC BY 4.0，见 `assets/template/LICENSE-template-CC-BY-4.0.txt`。
+模板 (AJbook) 为李文威的作品，CC BY 4.0，见 `skills/zh-study-edition/assets/template/LICENSE-template-CC-BY-4.0.txt`。
